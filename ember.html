@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS frameworks</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+
+    <!-- optional imports that use the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+
+    <!-- individual imports -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/animations.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gradients.min.css" />
+    <!-- see PropPacks for the full list -->
+    <link rel="stylesheet" href="fonts/fontello.ttf">
+</head>
+
+<body>
+    <header>
+        <div class="block" id="navbar">
+            <a href="index.html" class="nav_a">Главная</a>
+            <a href="frameworks.html" class="nav_a">Фреймворки</a>
+            <a href="about_us.html" class="nav_a">О нас</a>
+        </div>
+        <div class="block" id="navbar_small">
+            <div class="hamburger-icon"></div>
+            <ul style="list-style: none;" id="navbar_s">
+                <li><a style="text-decoration: none; color: white;" href="index.html">Главная</a></li>
+                <li><a style="text-decoration: none; color: white;" href="frameworks.html">Фреймворки</a></li>
+                <li><a style="text-decoration: none; color: white;" href="about_us.html">О нас</a></li>
+            </ul>
+        </div>
+        <div class="block" id="logo">
+            <a href="index.html" class="logo_img_block">
+                <img src="img/JS4.png" alt="">
+            </a>
+        </div>
+        <div class="block" id="nav_clock">
+            <div class="clock">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="mainn" style="margin-left: 20%; display: flex; flex-direction: row; border-left: 4px solid #eeb87e;">
+        <nav class="sidebar">
+            <div style="margin-top: 20px; margin-left: 5%;">5 лучших JS-фреймворков:</div>
+            <div class="navside">
+                <div>
+                    <a href="react.html">React.js</a>
+                </div>
+                <div>
+                    <a href="angular.html">AngularJS</a>
+                </div>
+                <div>
+                    <a href="vue.html">Vue.js</a>
+                </div>
+                <div>
+                    <a class="active" href="ember.html">Ember.js</a>
+                </div>
+                <div>
+                    <a href="svelte.html">Svelte</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-framevorks">
+            <div class="card">
+                <div class="frameworks-text">
+                    <h4>Ember.js</h4>
+                    Ember.js — отличный вариант под разработку масштабируемых приложений, заточенных под бизнес.
+                    Архитектура Model-View-ViewModel основная. У Ember есть ключевая функция, которая делает фреймворк
+                    одним из лучших – интерфейс командной строки, он же положительно сказывается на производительности.
+                </div>
+            </div>
+            <div id="two-card">
+                <div class="card" id="card1">
+                    <div class="frameworks-text">
+                        Одной из особенностей Ember является его концепция "батареек в комплекте" (batteries included).
+                        Это значит, что фреймворк предоставляет комплексное решение для разработки, включая
+                        функциональность маршрутизации, управления состоянием, хранения данных и многих других.
+
+                        Ember также предлагает мощный и декларативный шаблонизатор, который позволяет разработчикам
+                        легко создавать динамические пользовательские интерфейсы с помощью шаблонов.
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="frameworks-text">
+                        <img style="width: 18vw; margin: auto;" src="img/ember.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="frameworks-text">
+                    <h4>Преимущества и Недостатки</h4>
+                    <table style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+                        <thead>
+                            <th>Преимущества</th>
+                            <th>Недостатки</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Простая структура работы с API.</td>
+                                <td>Обучение сложное, если сравнивать с Vue.js или React.</td>
+                            </tr>
+                            <tr>
+                                <td>Использование подхода CoC, что дает возможность сразу приступать к написанию кода и
+                                    разработке ПО без конфигураций.</td>
+                                <td>Для крупных приложений очень сложный и тяжелый для небольшого ПО.</td>
+                            </tr>
+                            <tr>
+                                <td>Хорошая документация с детальным описанием и поддержка, наличие учебных материалов,
+                                    справочников для быстрого, легкого освоения.</td>
+                                <td>Любые отклонения от классических действия при программировании могут вызывать
+                                    негативные последствия.</td>
+                            </tr>
+                            <tr>
+                                <td>Средство повышения производительности в виде командной строки Ember CLI. С его
+                                    помощью легче выполнить настройку проектов и создавать компоненты, контроллеры через
+                                    автоматическую генерацию.</td>
+                                <td>Не привлекает новых разработчиков, стагнирует в последние годы.</td>
+                            </tr>
+                            <tr>
+                                <td>Inspector Tool – инструмент (расширение Chrome и Firefox) для контроля и
+                                    редактирования ПО в реальном времени.</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Двухстороння привязка данных и обратная совместимость с ранними версиями.</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    При этом фреймворк не стоит списывать, у него есть много плюсов и возможностей. Известные сайты на
+                    его базе – Ghost, LinkedIn, Microsoft, Netflix, Twitch, Yahoo.
+                </div>
+            </div>
+
+
+            <a href="ember.html#logo" class="btn" type="button"
+                style="margin: auto; margin-top: 20px; margin-bottom: 20px;">
+                <strong>НАВЕРХ</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>© Сыктывкар 2023</p>
+    </footer>
+    <script>
+        const navbarSmall = document.getElementById("navbar_small");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const menuItems = document.getElementById("navbar_s");
+
+        // Создаем обработчик события на клик по блоку  
+        navbarSmall.addEventListener("click", function () {
+
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none"; // Скрываем элементы меню  
+            } else {
+                menuItems.style.display = "block"; // Показываем элементы меню  
+            }
+        });  
+    </script>
+    <script>
+        const WEEK = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+
+        function updateTime() {
+            var now = new Date();
+
+            document.getElementById("time").innerText =
+                zeroPadding(now.getHours(), 2) + ":" +
+                zeroPadding(now.getMinutes(), 2) + ":" +
+                zeroPadding(now.getSeconds(), 2);
+
+            document.getElementById("date").innerText =
+                now.getFullYear() + "-" +
+                zeroPadding(now.getMonth() + 1, 2) + "-" +
+                zeroPadding(now.getDate(), 2) + " " +
+                WEEK[now.getDay()];
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        function zeroPadding(num, digit) {
+            return String(num).padStart(digit, '0');
+        }  
+    </script>
+    <script>
+        document.querySelector(".hamburger-icon").addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        }); 
+    </script>
+</body>
+
+</html>

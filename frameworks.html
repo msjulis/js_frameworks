@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS frameworks</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+
+    <!-- optional imports that use the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+
+    <!-- individual imports -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/animations.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gradients.min.css" />
+    <!-- see PropPacks for the full list -->
+    <link rel="stylesheet" href="fonts/fontello.ttf">
+</head>
+
+<body>
+    <header>
+        <div class="block" id="navbar">
+            <a href="index.html" class="nav_a">Главная</a>
+            <a href="frameworks.html" class="nav_a active">Фреймворки</a>
+            <a href="about_us.html" class="nav_a">О нас</a>
+        </div>
+        <div class="block" id="navbar_small">
+            <div class="hamburger-icon"></div>
+            <ul style="list-style: none;" id="navbar_s">
+                <li><a style="text-decoration: none; color: white;" href="index.html">Главная</a></li>
+                <li><a style="text-decoration: none; color: white;" href="frameworks.html">Фреймворки</a></li>
+                <li><a style="text-decoration: none; color: white;" href="about_us.html">О нас</a></li>
+            </ul>
+        </div>
+        <div class="block" id="logo">
+            <a href="index.html" class="logo_img_block">
+                <img src="img/JS4.png" alt="">
+            </a>
+        </div>
+        <div class="block" id="nav_clock">
+            <div class="clock">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="mainn" style="margin-left: 20%; display: flex; flex-direction: row; border-left: 4px solid #eeb87e;">
+        <nav class="sidebar">
+            <div style="margin-top: 20px; margin-left: 5%;">5 лучших JS-фреймворков:</div>
+            <div class="navside">
+                <div>
+                    <a href="react.html">React.js</a>
+                </div>
+                <div>
+                    <a href="angular.html">AngularJS</a>
+                </div>
+                <div>
+                    <a href="vue.html">Vue.js</a>
+                </div>
+                <div>
+                    <a href="ember.html">Ember.js</a>
+                </div>
+                <div>
+                    <a href="svelte.html">Svelte</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-framevorks">
+            <h4 style="margin:auto; margin-top: 20px;">Лучшие JavaScript фреймворки</h4>
+            <div class="frameworks-text">
+                В 2022 году был выполнен опрос разработчиков ПО, которые выбрали JavaScript, как самый частоиспользуемый
+                язык. Первое место не уступает другим языкам программирования в течение 10 последних лет и это выбор
+                более 65% людей. Главная причина популярности – универсальность, ведь JS можно применять для
+                интерфейсной, внутренней разработки и тестирования софта. Найти лучший JS фреймворк на 2024 непросто,
+                ведь все они с конкретными особенностями использования, плюсами и минусами. Выбор очень большой и важно
+                ориентироваться на точный проект, его цели. В статье разберем лучшие варианты на 2024 год в виде списка
+                лучших фреймворков JavaScript для интерфейса, бэкенда и тестирования.
+            </div>
+            <h4 style="margin-left: 5%; margin-top: 30px;"> 5 лучших JavaScript-фреймворков для фронтенд-разработки</h4>
+            <div class="frameworks-text">
+                20 лет JavaScript активно применяют для создания интерфейсов. Среди популярных вариантов следует
+                отметить React, AngularJS и Vue.js. Они постоянно соревнуются между собой в первенстве, но остаются в
+                ТОПе и будут занимать эти места в 2024, как лучшие фреймворки JS.
+            </div>
+            <img style="width: 90%; margin: auto; margin-bottom: 20px;" src="img/top.png" alt="">
+            <div class="frameworks-text" style="margin-left: 31%;">Лучшие фреймворки JavaScript для фронтенд-разработки.</div>
+
+            <a href="frameworks.html#logo" class="btn" type="button" style="margin: auto; margin-top: 20px; margin-bottom: 20px;" >
+                <strong>НАВЕРХ</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>© Сыктывкар 2023</p>
+    </footer>
+    <script>
+        const navbarSmall = document.getElementById("navbar_small");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const menuItems = document.getElementById("navbar_s");
+
+        // Создаем обработчик события на клик по блоку  
+        navbarSmall.addEventListener("click", function () {
+
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none"; // Скрываем элементы меню  
+            } else {
+                menuItems.style.display = "block"; // Показываем элементы меню  
+            }
+        });  
+    </script>
+    <script>
+        const WEEK = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+
+        function updateTime() {
+            var now = new Date();
+
+            document.getElementById("time").innerText =
+                zeroPadding(now.getHours(), 2) + ":" +
+                zeroPadding(now.getMinutes(), 2) + ":" +
+                zeroPadding(now.getSeconds(), 2);
+
+            document.getElementById("date").innerText =
+                now.getFullYear() + "-" +
+                zeroPadding(now.getMonth() + 1, 2) + "-" +
+                zeroPadding(now.getDate(), 2) + " " +
+                WEEK[now.getDay()];
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        function zeroPadding(num, digit) {
+            return String(num).padStart(digit, '0');
+        }  
+    </script>
+    <script>
+        document.querySelector(".hamburger-icon").addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        }); 
+    </script>
+</body>
+
+</html>

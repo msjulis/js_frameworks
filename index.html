@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS frameworks</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+
+    <!-- optional imports that use the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+
+    <!-- individual imports -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/animations.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gradients.min.css" />
+    <!-- see PropPacks for the full list -->
+    <link rel="stylesheet" href="fonts/fontello.ttf">
+</head>
+
+<body>
+    <header>
+        <div class="block" id="navbar">
+            <a href="index.html" class="nav_a active">Главная</a>
+            <a href="frameworks.html" class="nav_a">Фреймворки</a>
+            <a href="about_us.html" class="nav_a">О нас</a>
+        </div>
+        <div class="block" id="navbar_small">
+            <div class="hamburger-icon"></div>
+            <ul style="list-style: none;" id="navbar_s">
+                <li><a style="text-decoration: none; color: white;" href="index.html">Главная</a></li>
+                <li><a style="text-decoration: none; color: white;" href="frameworks.html">Фреймворки</a></li>
+                <li><a style="text-decoration: none; color: white;" href="about_us.html">О нас</a></li>
+            </ul>
+        </div>
+        <div class="block" id="logo">
+            <a href="index.html" class="logo_img_block">
+                <img src="img/JS4.png" alt="">
+            </a>
+        </div>
+        <div class="block" id="nav_clock">
+            <div class="clock">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="mainn">
+        <div class="container">
+            <h4 style="margin-top: 20px; margin-left: 38%;">Немного о фреймворках</h4>
+            <img class="about-frames-img" src="img/framework.jpg" alt="">
+            Фреймворки - это набор инструментов и библиотек, которые помогают
+            разработчикам упростить процесс создания программного обеспечения. Они предоставляют готовые решения
+            для общих задач и устанавливают определенную структуру разработки. Фреймворки способны значительно
+            ускорить разработку программного продукта благодаря своей архитектуре и набору уже готовых модулей.
+            Они предлагают стандартизированный подход к созданию приложений, что позволяет разработчикам
+            сосредоточиться на решении более специфичных задач, не заботясь о базовых функциях и инфраструктуре.
+            Множество фреймворков доступно для разных языков программирования и для различных целей. Например,
+            для создания веб-приложений широко используются фреймворки, такие как Django для Python, Ruby on
+            Rails для Ruby, Laravel для PHP и другие. Они предоставляют разработчикам ряд удобных инструментов
+            для работы с базами данных, обработки запросов, управления сеансами, маршрутизации и многое другое.
+
+            Фреймворки также помогают обеспечить безопасность программных продуктов, предоставляя инструменты
+            для защиты от атак и уязвимостей. Они также облегчают тестирование и отладку приложений,
+            предоставляя специальные инструменты для автоматизации тестов и отслеживания ошибок.
+            <img class="about-frames-img2" src="img/JS.jpg" alt="">
+            <h4>Классификация фреймворков</h4>
+            <ul class="сlassification-of-frameworks">
+                <li>
+                    1. По предметной области:
+                    <ul style="width: 44vw; font-size: var(--size-3);">
+                        ● Веб-фреймворки - предназначены для разработки веб-приложений и обычно включают инструменты для
+                        работы с HTTP, маршрутизацией, шаблонами и базами данных.
+                    </ul>
+                    <ul style="width: 44vw; font-size: var(--size-3);">
+                        ● Мобильные фреймворки - созданы специально для разработки приложений для мобильных устройств,
+                        поддерживают функциональность, связанную с мобильными платформами, такие как управление
+                        геолокацией, доступ к камере и другие.
+                    </ul>
+                    <ul style="width: 44vw; font-size: var(--size-3);">
+                        ● Игровые фреймворки - предоставляют набор инструментов и функциональность для разработки
+                        компьютерных игр, включая графику, физику, аудио и управление вводом.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Desktop фреймворки - разработаны для создания настольных приложений и включают инструменты для
+                        работы с графикой, мультимедиа, базами данных и другими характерными функциями.
+                    </ul>
+                </li>
+                <li>
+                    2. По языку программирования:
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Python фреймворки - разработаны специально для языка программирования Python, такие как
+                        Django, Flask и Pyramid.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● PHP фреймворки - предназначены для разработки на PHP, такие как Laravel, Symfony и
+                        CodeIgniter.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● JavaScript фреймворки - используются для разработки фронтенд-приложений на JavaScript, такие
+                        как Angular, React и Vue.js.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Ruby фреймворки - предназначены для Ruby, такие как Ruby on Rails и Sinatra.
+                    </ul>
+                </li>
+                <li>
+                    3. По модели разработки:
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Full-stack фреймворки - предоставляют функциональность для разработки всех компонентов
+                        приложения, включая фронтенд и бэкенд.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Микрофреймворки - имеют минимальный набор функций и обычно используются для быстрой разработки
+                        небольших приложений или в качестве базы для разработки собственного фреймворка.
+                    </ul>
+                </li>
+                <li>
+                    4. По лицензии:
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Open-source фреймворки - имеют открытый исходный код и обычно доступны бесплатно для
+                        использования
+                        и модификации.
+                    </ul>
+                    <ul style="width: 92vw; font-size: var(--size-3);">
+                        ● Проприетарные фреймворки - разработаны компаниями и могут требовать покупку лицензии для
+                        использования.
+                    </ul>
+                </li>
+            </ul>
+            Классификация фреймворков может быть гибкой и зависит от многих факторов. Каждый фреймворк имеет свои
+            особенности и направлен на решение конкретных задач, поэтому выбор подходящего фреймворка зависит от
+            потребностей и предпочтений разработчика.
+            <iframe style="width: 50vw; margin: auto; margin-top: 20px;" height="315" src="https://www.youtube.com/embed/5EsLj3JOdE0?si=QgJ1Xr3kKtIGLLAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="index.html#logo" class="btn" type="button" style="margin: auto; margin-top: 20px;">
+                <strong>НАВЕРХ</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>© Сыктывкар 2023</p>
+    </footer>
+    <script>
+        const navbarSmall = document.getElementById("navbar_small");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const menuItems = document.getElementById("navbar_s");
+
+        // Создаем обработчик события на клик по блоку  
+        navbarSmall.addEventListener("click", function () {
+
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none"; // Скрываем элементы меню  
+            } else {
+                menuItems.style.display = "block"; // Показываем элементы меню  
+            }
+        });  
+    </script>
+    <script>
+        const WEEK = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+
+        function updateTime() {
+            var now = new Date();
+
+            document.getElementById("time").innerText =
+                zeroPadding(now.getHours(), 2) + ":" +
+                zeroPadding(now.getMinutes(), 2) + ":" +
+                zeroPadding(now.getSeconds(), 2);
+
+            document.getElementById("date").innerText =
+                now.getFullYear() + "-" +
+                zeroPadding(now.getMonth() + 1, 2) + "-" +
+                zeroPadding(now.getDate(), 2) + " " +
+                WEEK[now.getDay()];
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        function zeroPadding(num, digit) {
+            return String(num).padStart(digit, '0');
+        }  
+    </script>
+    <script>
+        document.querySelector(".hamburger-icon").addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        }); 
+    </script>
+</body>
+
+</html>

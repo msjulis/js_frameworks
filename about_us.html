@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS frameworks</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+
+    <!-- optional imports that use the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+
+    <!-- individual imports -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/animations.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gradients.min.css" />
+    <!-- see PropPacks for the full list -->
+    <link rel="stylesheet" href="fonts/fontello.ttf">
+</head>
+
+<body>
+    <header>
+        <div class="block" id="navbar">
+            <a href="index.html" class="nav_a">Главная</a>
+            <a href="frameworks.html" class="nav_a">Фреймворки</a>
+            <a href="about_us.html" class="nav_a active">О нас</a>
+        </div>
+        <div class="block" id="navbar_small">
+            <div class="hamburger-icon"></div>
+            <ul style="list-style: none;" id="navbar_s">
+                <li><a style="text-decoration: none; color: white;" href="index.html">Главная</a></li>
+                <li><a style="text-decoration: none; color: white;" href="frameworks.html">Фреймворки</a></li>
+                <li><a style="text-decoration: none; color: white;" href="about_us.html">О нас</a></li>
+            </ul>
+        </div>
+        <div class="block" id="logo">
+            <a href="index.html" class="logo_img_block">
+                <img src="img/JS4.png" alt="">
+            </a>
+        </div>
+        <div class="block" id="nav_clock">
+            <div class="clock">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="mainn" style="display: flex; flex-direction: column;" >
+        <div class="container-profile">
+            <img class="profile-img" src="img/profile.png" alt="">
+            <div class="profile-text" style="margin-right: 10px;">
+                Мы команда профессионалов в области веб-разработки, и наша страсть - JavaScript фреймворки. Мы посвятили
+                себя изучению, использованию и совершенствованию этих мощных инструментов, чтобы помочь нашим клиентам
+                воплотить свои идеи в жизнь.
+                JavaScript фреймворки являются сегодня неотъемлемой частью веб-разработки, обеспечивая эффективный и
+                организованный подход к созданию сложных и интерактивных пользовательских интерфейсов. Они позволяют
+                ускорить процесс разработки, повысить эффективность работы и создать продукт, который делает впечатление
+                на пользователей.
+                Наша команда имеет глубокие знания и богатый опыт работы с различными JavaScript фреймворками, такими
+                как React, Angular и Vue. Мы всегда следим за последними трендами и новыми возможностями в данной сфере,
+                чтобы быть в курсе самых передовых технологий.
+            </div>
+        </div>
+        <div class="container-profile">
+            <div class="profile-text" style="margin-right: 10px;">
+                Мы предлагаем нашим клиентам полный спектр услуг, связанных с JavaScript фреймворками, включая
+                консультации, разработку пользовательских интерфейсов, создание пользовательских компонентов,
+                оптимизацию производительности и многое другое. Наш коллектив гарантирует высокое качество работы,
+                исключительную эффективность и индивидуальный подход к каждому проекту.
+                
+                Если вы ищете надежных экспертов по JavaScript фреймворкам, мы готовы помочь вам достичь ваших целей и
+                создать продукт, о котором вы всегда мечтали. Свяжитесь с нами сегодня и дайте нам возможность
+                превратить вашу идею в реальность.
+            </div>
+            <img class="profile-img2" src="img/profile2.png" alt="">
+        </div>
+
+        <a href="about_us.html#logo" class="btn" type="button" style="margin: auto; margin-top: 20px; margin-bottom: 20px;" >
+            <strong>НАВЕРХ</strong>
+            <div id="container-stars">
+                <div id="stars"></div>
+            </div>
+            
+            <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </a>
+    </div>
+
+
+
+    <footer>
+        <p>© Сыктывкар 2023</p>
+    </footer>
+    <script>
+        const navbarSmall = document.getElementById("navbar_small");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const menuItems = document.getElementById("navbar_s");
+
+        // Создаем обработчик события на клик по блоку  
+        navbarSmall.addEventListener("click", function () {
+
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none"; // Скрываем элементы меню  
+            } else {
+                menuItems.style.display = "block"; // Показываем элементы меню  
+            }
+        });  
+    </script>
+    <script>
+        const WEEK = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+
+        function updateTime() {
+            var now = new Date();
+
+            document.getElementById("time").innerText =
+                zeroPadding(now.getHours(), 2) + ":" +
+                zeroPadding(now.getMinutes(), 2) + ":" +
+                zeroPadding(now.getSeconds(), 2);
+
+            document.getElementById("date").innerText =
+                now.getFullYear() + "-" +
+                zeroPadding(now.getMonth() + 1, 2) + "-" +
+                zeroPadding(now.getDate(), 2) + " " +
+                WEEK[now.getDay()];
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        function zeroPadding(num, digit) {
+            return String(num).padStart(digit, '0');
+        }  
+    </script>
+    <script>
+        document.querySelector(".hamburger-icon").addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        }); 
+    </script>
+</body>
+
+</html>
